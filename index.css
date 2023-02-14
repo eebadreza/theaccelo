@@ -106,3 +106,6 @@ html{
   .demo:empty {
     display: none;  
 }
+input {
+  text-align: center;
+}
