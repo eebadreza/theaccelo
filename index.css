@@ -87,6 +87,8 @@ html{
     border-radius: 3px;
     outline: none;
     padding: 5px 5px 5px 5px;
+    background-color: #fff;
+    color: #369ca3;
   }
   
   /* Style the login button */
