@@ -58,7 +58,7 @@ html{
   }
   
   #error-msg-second-line {
-    display: block;
+    /* display: block; */
   }
   
   /* -------------------------------------------------------------- */
