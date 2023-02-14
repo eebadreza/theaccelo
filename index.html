@@ -23,7 +23,13 @@
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 550px}
     
-    /* On small screens, set height to 'auto' for sidenav and grid */
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #000;
+      height: 1400px;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
     @media screen and (max-width: 767px) {
       .row.content {height: auto;} 
     }
@@ -31,27 +37,405 @@
 </head>
 <body>
 
+    <div id="top" style="position:fixed; background:#369ca3; width:100%;height: 50px;z-index: 50;margin-bottom: 10px;">
+          
+        </div>
+<nav class="navbar navbar-inverse visible-xs" style="z-index: 100;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Age</a></li>
+        <li><a href="#">Gender</a></li>
+        <li><a href="#">Geo</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      
+    <div class="col-sm-2 sidenav hidden-xs" style="z-index: 200;">
+      <img src="/AcceloLogo.png" alt="" width="120" style="padding-bottom: 20px; margin-top: 10px;">
+      <img src="/Beast PNG.png" alt="" width="230" style="padding-bottom: 20px; margin-top: 10px;">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1"><b>Id:</b> beast</text></a></li>
+        <li><a href="#"><b>Vehicle-Type:</b> LMV</text></a></li>
+        <li><a href="#"><b>Total-Payload:</b> 2000 kg</text></a></li>
+        <li><a href="#"><b>Owner:</b> Accelo Mobility</text></a></li>
+        <li><a href="#"><b>Chassis No:</b> SV30-0169266</text></a></li>
+      </ul><br>
     </div>
     <br>
     
     <div class="col-sm-10">
       
+
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-2">
+          <div class="well" style="background-color: rgb(81, 213, 81);">
+            Voltage<br/>
+            <voltage_text style="font-size: 20px;" ></voltage_text><br/>
+            <br>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="well" style="background-color: rgb(81, 213, 81);">
+            Speed<br />
+            <speed_text style="font-size: 20px;"></speed_text><br /> 
+            <br>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="well" style="background-color: rgb(81, 213, 81);">
+            Current<br />
+            <current_text style="font-size: 20px;"></current_text><br />
+            <br>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="well" style="background-color: rgb(81, 213, 81);">
+            Controller Temperature<br/>
+            <controller_temp_text style="font-size: 20px;"></controller_temp_text><br />
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="well" style="background-color: rgb(81, 213, 81);">
+            Motor Temperature<br />
+            <motor_temperature_text style="font-size: 20px;"></motor_temperature_text><br />
+            <br>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="well" style="background-color: rgb(81, 213, 81);">
+            Wire Temperature<br />
+            <wire_temperature_text style="font-size:20px;"></wire_temperature_text><br />
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well ctn" style="box-sizing: border-box; ">
+            <iframe style="background: #FFFFFF;border: none; border-radius:2px; box-shadow:0 2px 10px 0 rgba(70, 76, 79, .2); position:relative; overflow:visible;" width="233px" height="230px" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63c934f7-cc24-43ce-8118-b7f44234dc49&maxDataAge=10&theme=light&autoRefresh=true"></iframe>
+          </div>
+          <div class="well">
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="233" height="230" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63c912e9-a703-478a-87db-3abf05a2e759&maxDataAge=10&theme=light&autoRefresh=true"></iframe>
+
+          </div>
+          <div class="well">
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="233" height="230" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63c913b3-7fb8-4649-8c01-329c6c6d1b00&maxDataAge=10&theme=light&autoRefresh=true"></iframe>                   
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="well">
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="530" height="820" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63c90e76-a703-4c59-83fc-3abf05a08c05&maxDataAge=60&theme=light&autoRefresh=true"></iframe>
+                           
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="233" height="230" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63c94109-e13e-49f2-8953-90c76eaf39cd&maxDataAge=10&theme=light&autoRefresh=true"></iframe>              
+          </div>
+          <div class="well">
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="233" height="230" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63c903c3-e13e-4dcf-8aff-90c76e87d3ae&maxDataAge=10&theme=light&autoRefresh=true"></iframe>
+                            
+          </div>
+          <div class="well">
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="233" height="230" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63c901c9-23d1-4180-8884-81a842a80df6&maxDataAge=10&theme=light&autoRefresh=true"></iframe>
+                           
+          </div>
+
+        </div>
+      </div>
       
-    </div>
-    <div class="col-sm-9">
-      
-      
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+             <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="330" height="250" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63cf9b8f-cd93-4912-8aa1-276dd20ed8e4&maxDataAge=10&theme=light&autoRefresh=true"></iframe>
+                            
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+           <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="330" height="250" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63cf9bbc-870a-4d2b-8658-ae4b2c12d060&maxDataAge=10&theme=light&autoRefresh=true"></iframe>
+                           
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+             <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="330" height="250" src="https://charts.mongodb.com/charts-project-0-llped/embed/charts?id=63cf9c0d-e246-4013-8731-79eb55feb3c4&maxDataAge=10&theme=light&autoRefresh=true"></iframe>
+                          
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-<footer class="container-fluid">
-  <p>Footer Text</p>
+<footer class="container-fluid text-center">
+  <p>Accelo Automotive Pvt. Ltd.</p>
 </footer>
+<script type="text/javascript">
+        setInterval(function(){    
+        fetch('https://fabfest.theacceloguy.com/backend/recent/beast')
+        .then(
+            res => {
+                
+                return res.json();
+            })
+        .then(
+            
+            data => {
+                console.log(data);
+                
+                    data.body.beast.forEach(beast => {
+                    const markup = `${beast.v}`;
+                                                     
+                    document.querySelector('voltage_text').innerHTML = markup;
 
+                    //conditional box color change of voltage real time data
+                    if (markup < 65)
+                    {
+                        document.getElementById("voltage").style.backgroundColor = "#ad0000"; //red
+                    }
+                    else
+                    {
+                        document.getElementById("voltage").style.backgroundColor = "#129f31"; //green
+                    }
+                });
+                                    
+            })
+        },2000)
+
+        .catch(error => console.log(error));
+    
+    </script>
+
+    <!-- live current data -->
+    <script type="text/javascript">
+    setInterval(function(){    
+        fetch('https://fabfest.theacceloguy.com/backend/recent/beast')
+        .then(
+            res => {
+                return res.json();
+            })
+        .then(
+            
+            data => {
+
+                console.log(data);
+
+                data.body.beast.forEach(beast => {
+                    const markup = `${beast.c}`;
+                    document.querySelector('current_text').innerHTML = markup;
+
+                    //conditional box color change of current real time data
+                    if (markup > 150)
+                    {
+                        document.getElementById("current").style.backgroundColor = "#ad0000"; //red
+                    }
+                    else
+                    {
+                        document.getElementById("current").style.backgroundColor = "#129f31"; //green
+                    }
+                });
+            }
+        )
+    },2000)
+    .catch(error => console.log(error)); 
+
+    </script>
+
+    <!-- live speed data -->
+    <script type="text/javascript">
+    setInterval(function(){
+        fetch('https://fabfest.theacceloguy.com/backend/recent/beast')
+        .then(
+            res => {
+                return res.json();
+            })
+        .then(
+            
+            data => {
+
+                console.log(data);
+
+                data.body.beast.forEach(beast => {
+                    const markup = `${beast.s}`;
+                    document.querySelector('speed_text').innerHTML = markup;
+
+                    //conditional box color change of speed real time data
+                    if (markup > 60)
+                    {
+                        document.getElementById("speed").style.backgroundColor = "#ad0000"; //red
+                    }
+                    else
+                    {
+                        document.getElementById("speed").style.backgroundColor = "#129f31"; //green
+                    }
+                });
+
+            }
+        )
+    },2000)
+    .catch(error => console.log(error));
+
+    </script>
+
+    <!-- live controller_temp data -->
+    <script type="text/javascript">
+    setInterval(function(){
+        fetch('https://fabfest.theacceloguy.com/backend/recent/beast')
+        .then(
+            res => {
+                
+                return res.json();
+            })
+        .then(
+            
+            data => {
+                    
+                console.log(data);
+
+                data.body.beast.forEach(beast => {
+                    const markup = `${beast.c_t}`;
+                    document.querySelector('controller_temp_text').innerHTML = markup;
+
+                    //conditional box color change of controller temperature real time data
+                    if (markup > 50)
+                    {
+                        document.getElementById("cont_temp").style.backgroundColor = "#ad0000"; //red
+                    }
+                    else if (markup > 40 ) 
+                    {
+                        document.getElementById("cont_temp").style.backgroundColor = "#F78702"; //orange
+                    }
+                    else
+                    {
+                        document.getElementById("cont_temp").style.backgroundColor = "#129f31"; //green
+                    }
+                });
+            }
+        )
+    },2000)
+    .catch(error => console.log(error));
+    
+    </script>
+
+	<!-- live motor temperature data -->
+    <script type="text/javascript">
+    setInterval(function(){            
+            fetch('https://fabfest.theacceloguy.com/backend/recent/beast')
+            .then(
+                res => {
+                    
+                    return res.json();
+                })
+            .then(
+                
+                data => {
+                        
+                    console.log(data);
+
+                    data.body.beast.forEach(beast => {
+
+                        const markup = `${beast.m_t}`;
+                        document.querySelector('motor_temperature_text').innerHTML = markup;
+
+                        //conditional box color change of motor temperature real time data
+                        if (markup > 50)
+                        {
+                            document.getElementById("motor_temp").style.backgroundColor = "#ad0000"; //red
+                        }
+                        else if (markup > 40 ) 
+                        {
+
+                            document.getElementById("motor_temp").style.backgroundColor = "#F78702"; //orange
+
+                        }
+                        else
+                        {
+                            document.getElementById("motor_temp").style.backgroundColor = "#129f31"; //green
+                        }
+                        });
+                    
+                }
+            )
+        },2000)
+        .catch(error => console.log(error));
+    </script>
+
+    <!-- live wire temperature data -->
+    <script type="text/javascript">         
+    setInterval(function(){ 
+            fetch('https://fabfest.theacceloguy.com/backend/recent/beast')
+            .then(
+                res => {
+                    
+                    return res.json();
+                })
+            .then(
+                
+                data => {   
+                    console.log(data);
+                    
+                    data.body.beast.forEach(beast => {
+                        const markup = `${beast.w_t}`;
+                        document.querySelector('wire_temperature_text').innerHTML = markup;
+
+                        //conditional box color change of wire temperature real time data
+                        if (markup > 50)
+                        {
+                            document.getElementById("wire_temp").style.backgroundColor = "#ad0000"; //red
+                        }
+                        else if (markup > 40 ) {
+
+                            document.getElementById("wire_temp").style.backgroundColor = "#F78702"; //orange
+                                                
+                        }
+                        else
+                        {
+                            document.getElementById("wire_temp").style.backgroundColor = "#129f31"; //green
+                        }
+                                            
+                    });
+                        
+                }
+            )
+        },2000)
+        .catch(error => console.log(error));
+    </script>
+
+    <!-- id of our vehicle -->
+    <script type="text/javascript">         
+
+        fetch('https://fabfest.theacceloguy.com/backend/recent/beast')
+        .then(
+            res => {
+                
+                return res.json();
+            })
+        .then(
+            data => {
+                    
+                console.log(data);
+                data.body.beast.forEach(beast => {
+                    const markup = `${beast.id}`;
+                    document.querySelector('subheading').insertAdjacentHTML("beforeend", markup);
+                });
+            }
+        ) 
+        .catch(error => console.log(error));
+     
+    </script>
 </body>
 </html>
